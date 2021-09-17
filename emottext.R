@@ -4,6 +4,7 @@ library(ggplot2)
 library(scales)
 library(reshape2)
 
+# CSV needs a column labelled "text" see line 9
 csv <- read.csv("E:/XXXXXXXX/emotesttext.csv", stringsAsFactors = FALSE)
 mySentiment <- get_nrc_sentiment(csv$text)
 csv <- cbind(csv, mySentiment)
